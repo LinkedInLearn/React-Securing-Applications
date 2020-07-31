@@ -8,9 +8,9 @@ import About from './About';
 import data from '../data/data.json';
 import './App.css';
 
-const createMarkup = () => {
-  return {_html: 'I\'m so dangerous you could feel it'}
-}
+// const createMarkup = () => {
+//   return {_html: 'I\'m so dangerous you could feel it'}
+// }
 
 class App extends Component {
   constructor(props) {
@@ -56,7 +56,7 @@ class App extends Component {
               {' '}
               Inc.
             </p>
-            <div innerHTML={createMarkup()}/>
+            {/*<div innerHTML={createMarkup()}/>*/}
           </div>
         </div>
       </Router>
