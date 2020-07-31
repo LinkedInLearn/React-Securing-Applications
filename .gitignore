@@ -22,5 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /project/node_modules/
+/project/Client/node_modules/
 /.idea/
 /project/package-lock.json
+/project/Client/package-lock.json
