@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
-import { Auth0Provider } from "@auth0/auth0-react";
+import { useAuth0 } from '@auth0/auth0-react';
 import history from '../history';
 import Navigation from './Navigation';
 import Jumbotron from './Jumbotron';
@@ -24,13 +24,13 @@ class App extends Component {
 
   // eslint-disable-next-line camelcase
   async componentDidMount() {
-    const url = 'http://localhost:3000/courses';
+    const url = 'http://localhost:4000/courses';
     const response = await axios.get(url);
     return this.setState({ feeds: response.data });
   }
 
   render() {
-    const { loading } = Auth0Provider;
+    const { loading } = useAuth0;
 
     if (loading) {
       return <Loading />;

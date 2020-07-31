@@ -1,5 +1,6 @@
 import React from 'react';
-import FeedItem from './FeedItem';
+
+import FeedItem from './FeedItem.js';
 
 const Feed = (props) => {
   return (
